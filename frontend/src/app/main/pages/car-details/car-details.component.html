@@ -1,0 +1,43 @@
+<app-main-bar></app-main-bar>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="mx-auto col-11 col-sm-11 col-md-11 col-lg-11">
+            <!-- carousel -->
+
+            <div style="margin-bottom: 100px;">
+                <div *ngIf="car['0']?.images!.length > 0"
+                    id="carouselExampleCaptions"
+                    data-bs-ride="carousel"
+                    class="carousel slide carousel-fade"
+               >
+
+                   <!-- slider images -->
+                   <div class="carousel-inner shadow">
+                       <div *ngFor="let item of car[0]['images']; let k = index;" [class.active]="k == 0" class="carousel-item">
+                           <img [src]="imgPath + item" alt="Car image" class="d-block w-100">
+                       </div>
+                   </div>
+
+                   <!-- Indicators -->
+                   <ol class="carousel-indicators" >
+                       <li *ngFor="let item of car[0]['images']; let k = index;"
+                           data-bs-target="#carouselExampleCaptions"
+                           [attr.data-bs-slide-to]="k"
+                           [class.active]="k == 0"
+                           aria-current="true"
+                       >
+                           <img [src]="imgPath + item" class="d-block w-100" alt="Car image">
+                       </li>
+                   </ol>
+               </div>
+            </div>
+
+            <div class="custom-block-info" *ngFor="let item of car">
+                <h3 class="mb-3">{{ car[0]['name'] }}</h3>
+
+                <p>{{ car[0]['text'] }}</p>
+            </div>
+        </div>
+    </div>
+</div>

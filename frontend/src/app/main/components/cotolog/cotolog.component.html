@@ -1,0 +1,26 @@
+<section class="events-section section-padding " id="section_2">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 col-12 text-center">
+                <h2 class="mb-lg-5 mb-4">Katalog</h2>
+            </div>
+
+            <ng-container *ngFor="let item of car$ | async">
+                <div class="col-lg-4 col-md-6 col-11 mx-auto mb-3">
+                    <div class="custom-block-image-wrap h-100">
+                        <a class="w-100 h-100" [routerLink]="'/main/car/' + item.id">
+                            <img [src]="'./assets/images/car/' + item.images[0]" class="custom-block-image img-fluid h-100" alt="">
+                        </a>
+                        <div class="custom-btn-wrap w-100">
+                            <button data-bs-toggle="modal" data-bs-target="#sendMsg" (click)="carIdService.selectCarId(item.id)" class="btn custom-btn">
+                                <i class="fa fa-cart-plus me-2"></i>
+                                {{ item.name }}</button>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+
+        </div>
+    </div>
+</section>

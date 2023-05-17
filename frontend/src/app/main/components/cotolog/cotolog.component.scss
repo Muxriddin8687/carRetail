@@ -1,0 +1,29 @@
+.custom-block-image-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-block-image-wrap:hover .custom-block-image {
+    transform: scale(1.1);
+}
+
+.custom-block-image {
+    transition: all 0.3s;
+}
+
+.custom-block-image-wrap .custom-btn-wrap {
+    position: absolute;
+    bottom: 0;
+}
+
+.custom-block-image-wrap .custom-btn-wrap {
+    right: 0;
+    width: 50%;
+}
+
+.custom-block-image-wrap .custom-btn {
+    display: block;
+    padding: 5px 20px;
+    width: 100%;
+    border-radius: 0;
+}

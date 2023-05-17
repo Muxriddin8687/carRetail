@@ -1,0 +1,58 @@
+<footer class="site-footer mt-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-2 col-12 me-auto mb-5 mb-lg-0">
+                <img src="./assets/images/black_logo.png" alt="brand logo" width="100px">
+            </div>
+
+            <div class="col-lg-4 col-12">
+                <h5 class="site-footer-title mb-4">Ish vaqti</h5>
+
+                <p class="d-flex border-bottom pb-3 mb-3 me-lg-3">
+                    <span>Dush-Sesh</span>
+                    9:00 - 17:00
+                </p>
+
+                <p class="d-flex me-lg-3">
+                    <span>Yakshanba</span>
+                    10:00 - 15:00
+                </p>
+                <br>
+            </div>
+
+            <div class="col-lg-3 col-12 ms-auto">
+                <h5 class="site-footer-title mb-4">Bizni kuzatib boring</h5>
+                <ul class="social-icon mb-4" *ngFor="let item of contact$ | async">
+                    <li class="social-icon-item">
+                        <a [href]="item['youtube']" target="_blank" class="social-icon-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+
+                    <li class="social-icon-item">
+                        <a [href]="item['instagram']" target="_blank" class="social-icon-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+
+                    <li class="social-icon-item">
+                        <a [href]="item['telegram']" target="_blank" class="social-icon-link">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                    </li>
+
+                    <li class="social-icon-item">
+                        <a [href]="item['facebook']" target="_blank" class="social-icon-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        
+        <p class="copyright-text text-center">Copyright © 2023 UBTUIT</p>
+    </div>
+</footer>

@@ -1,0 +1,35 @@
+<div class="container mb-5">
+    <h2 class="section-title">Aloqa uchun ma'lumotlar</h2>
+    <form #f="ngForm" (ngSubmit)="save(f)">
+        <div class="row">
+
+            <div class="mx-auto col-11 col-sm-12">
+                <input name="address" [(ngModel)]="address" placeholder="To'liq manzilni kiriting" type="text" class="form-control mb-4" required minlength="5">
+            </div>
+            <div class="mx-auto col-11 col-sm-12 col-md-4">
+                <input name="phone1" [(ngModel)]="phone1" placeholder="Telefon raqam" type="text" class="form-control mb-4" required minlength="5">
+            </div>
+            <div class="mx-auto col-11 col-sm-12 col-md-4">
+                <input name="phone2" [(ngModel)]="phone2" placeholder="Telefon raqam" type="text" class="form-control mb-4" required minlength="5">
+            </div>
+            <div class="mx-auto col-11 col-sm-12 col-md-4">
+                <input name="email1" [(ngModel)]="email1" placeholder="Emailingizni kiriting" type="email" class="form-control mb-4" required minlength="5">
+            </div>
+            <div class="mx-auto col-11 col-sm-12 col-md-3">
+                <input name="youtube" [(ngModel)]="youtube" placeholder="youtube link" type="text" class="form-control mb-4" required minlength="5">
+            </div>
+            <div class="mx-auto col-11 col-sm-12 col-md-3">
+                <input name="facebook" [(ngModel)]="facebook" placeholder="facebook link" type="text" class="form-control mb-4" required minlength="5">
+            </div>
+            <div class="mx-auto col-11 col-sm-12 col-md-3">
+                <input name="instagram" [(ngModel)]="instagram" placeholder="instagram link" type="text" class="form-control mb-4" required minlength="5">
+            </div>
+            <div class="mx-auto col-11 col-sm-12 col-md-3">
+                <input name="telegram" [(ngModel)]="telegram" placeholder="telegram link" type="text" class="form-control mb-4" required minlength="5">
+            </div>
+
+        </div>
+        <button [disabled]="f.invalid" type="submit" class="btn btn-dark text-light ms-auto d-block">Saqlash</button>
+    </form>
+
+</div>
